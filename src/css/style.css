@@ -130,18 +130,17 @@ header .container {
 
 .logo  {
     margin-right: 93px;
-
     font-family: Raleway;
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
     letter-spacing: 0.03em;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
 
 .logo span {
-    color: var(--hover-color)
+    color: var(--hover-color);
 }
 
 /* ссылки в навигации-------------------- */
