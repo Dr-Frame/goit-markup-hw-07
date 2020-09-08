@@ -859,21 +859,11 @@ address {
   fill: #2196F3;
 }
 
-.form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.subscribe {
   padding: 40px;
 }
 
-.form p {
+.subscribe p {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -883,7 +873,7 @@ address {
   color: #212121;
 }
 
-.form__item-wrapper {
+.subscribe__item-wrapper {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -895,7 +885,7 @@ address {
   margin-bottom: 10px;
 }
 
-.form__label {
+.subscribe__label {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -904,7 +894,7 @@ address {
   color: #757575;
 }
 
-.form__input {
+.subscribe__input {
   padding: 12px 40px;
   height: 40px;
   width: 448px;
@@ -917,12 +907,12 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus {
+.subscribe__input:focus {
   border: 1px solid #2196F3;
   outline: none;
 }
 
-.form__input-icon {
+.subscribe__input-icon {
   position: absolute;
   left: 15px;
   -webkit-transform: translateY(30px);
@@ -931,7 +921,126 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus + .form__input-icon {
-  fill: var(--hover-color);
+.subscribe__input:focus + .subscribe__input-icon {
+  fill: #2196F3;
+}
+
+.subscribe__text-aria {
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe__text-aria:focus {
+  border: 1px solid #2196F3;
+  outline: none;
+}
+
+.subscribe__text-aria::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.subscribe__text-aria:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.subscribe__text-aria::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.subscribe__text-aria::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.checkbox .box-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox__icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  border: 1px solid #212121;
+  border-radius: 3px;
+}
+
+.box-hidden:checked + .checkbox__icon {
+  background-image: url(../img/icons/checkicon.svg);
+  background-size: contain;
+  background-position: center;
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.checkbox__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #2196F3;
+  text-decoration: underline;
+}
+
+.subscribe__submit {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px;
+  background: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */

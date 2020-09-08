@@ -64,10 +64,7 @@
 }
 
 
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.subscribe {
     padding: 40px;
 
     p {
@@ -123,9 +120,105 @@
         transform: translateY(30px);
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        .form__input:focus + & {
-            fill: var(--hover-color);
+        .subscribe__input:focus + & {
+            fill: $hover-color;
         }
     }
+
+    &__text-aria {
+        margin-bottom: 10px;
+        padding: 12px 16px;
+        resize: none;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus {
+            border: 1px solid $hover-color;
+            outline: none;
+        }
+        &::placeholder  {
+            color: rgba(117, 117, 117, 0.5);
+        }
+    }
+}
+
+.checkbox {
+    @include elementFlex();
+    margin-bottom: 30px;
+
+    &__label {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: $main-color;
+    }
+
+    .box-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 15px;
+        margin-right: 5px;
+        border: 1px solid $secondary-color;
+        border-radius: 3px;
+
+        .box-hidden:checked + & {
+            background-image: url(../img/icons/checkicon.svg);
+            background-size: contain;
+            background-position: center;
+            background-color: $hover-color;
+            border-color: $hover-color;
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: $hover-color;
+        text-decoration: underline;
+    }
+
+    
+}
+
+.subscribe__submit {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 55px;
+    background: $hover-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
 
 }
